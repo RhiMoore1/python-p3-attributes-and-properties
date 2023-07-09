@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# #!/usr/bin/env python3
 
 APPROVED_JOBS = [
     "Admin",
@@ -15,9 +15,8 @@ APPROVED_JOBS = [
     "Purchasing"
 ]
 
-
-class Person:
-    def __init__(self, name='Any', job='Purchasing'):
+class Person():
+    def __init__(self, name="Any", job="Any"):
         self.name = name
         self.job = job
 
@@ -29,8 +28,9 @@ class Person:
             self._name = name.title()
         else:
             print("Name must be string between 1 and 25 characters.")
-       
+
     name = property(get_name, set_name)
+
 
     def get_job(self):
         return self._job
